@@ -61,6 +61,10 @@ KUMARU is an advanced AI assistant utilizing **Intent-Based Routing**. The syste
 
 ---
 
+[thaipumpradar](https://www.thaipumpradar.com/)
+[text](https://oil-price.bangchak.co.th/ApiOilPrice2)
+
+
 ### 🚀 Technical Stack
 * **Platform:** Dify (Advanced Chatflow)
 * **Core Model:** vLLM (ptm-oss-120b)
