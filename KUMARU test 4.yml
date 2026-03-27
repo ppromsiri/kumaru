@@ -1,0 +1,2919 @@
+app:
+  description: Chatflow Agri Test
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: advanced-chat
+  name: KUMARU test 4
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: yangyaofei/vllm:0.2.0@392a821edaef5c275b89ce4b091e38c87709de3f089e507bdfd7862c3c638b36
+    version: null
+kind: app
+version: 0.5.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        attachment_image_file_size_limit: 2
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        file_upload_limit: 20
+        image_file_batch_limit: 10
+        image_file_size_limit: 10
+        single_chunk_attachment_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: true
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: question-classifier
+      id: 1769246337707-source-1769256025212-target
+      selected: false
+      source: '1769246337707'
+      sourceHandle: source
+      target: '1769256025212'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: answer
+      id: 1769256025212-1769256608701-1769256628655-target
+      selected: false
+      source: '1769256025212'
+      sourceHandle: '1769256608701'
+      target: '1769256628655'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: llm
+      id: 1769256025212-1-1772590760612-target
+      selected: false
+      source: '1769256025212'
+      sourceHandle: '1'
+      target: '1772590760612'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: 1772590760612-source-1772591435388-target
+      selected: false
+      source: '1772590760612'
+      sourceHandle: source
+      target: '1772591435388'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: if-else
+      id: 1772591435388-source-8000000000000-target
+      selected: false
+      source: '1772591435388'
+      sourceHandle: source
+      target: '8000000000000'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: agent
+      id: 8000000000000-true-1769246936158-target
+      selected: false
+      source: '8000000000000'
+      sourceHandle: 'true'
+      target: '1769246936158'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: if-else
+      id: 1772591435388-source-8000000000001-target
+      selected: false
+      source: '1772591435388'
+      sourceHandle: source
+      target: '8000000000001'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: agent
+      id: 8000000000001-true-1769246938196-target
+      selected: false
+      source: '8000000000001'
+      sourceHandle: 'true'
+      target: '1769246938196'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: if-else
+      id: 1772591435388-source-8000000000002-target
+      selected: false
+      source: '1772591435388'
+      sourceHandle: source
+      target: '8000000000002'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: agent
+      id: 8000000000002-true-1769246947033-target
+      selected: false
+      source: '8000000000002'
+      sourceHandle: 'true'
+      target: '1769246947033'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: if-else
+      id: 1772591435388-source-8000000000004-target
+      selected: false
+      source: '1772591435388'
+      sourceHandle: source
+      target: '8000000000004'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: agent
+      id: 8000000000004-true-17692535009230-target
+      selected: false
+      source: '8000000000004'
+      sourceHandle: 'true'
+      target: '17692535009230'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: if-else
+      id: 1772591435388-source-8000000000005-target
+      selected: false
+      source: '1772591435388'
+      sourceHandle: source
+      target: '8000000000005'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: agent
+      id: 8000000000005-true-1772597114397-target
+      selected: false
+      source: '8000000000005'
+      sourceHandle: 'true'
+      target: '1772597114397'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: variable-aggregator
+        targetType: llm
+      id: 1772597341854-source-1769248238853-target
+      selected: false
+      source: '1772597341854'
+      sourceHandle: source
+      target: '1769248238853'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: agent
+        targetType: variable-aggregator
+      id: 1769246936158-source-1772597341854-target
+      selected: false
+      source: '1769246936158'
+      sourceHandle: source
+      target: '1772597341854'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: agent
+        targetType: variable-aggregator
+      id: 1769246947033-source-1772597341854-target
+      selected: false
+      source: '1769246947033'
+      sourceHandle: source
+      target: '1772597341854'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: agent
+        targetType: variable-aggregator
+      id: 1769246938196-source-1772597341854-target
+      selected: false
+      source: '1769246938196'
+      sourceHandle: source
+      target: '1772597341854'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: agent
+        targetType: variable-aggregator
+      id: 17692535009230-source-1772597341854-target
+      selected: false
+      source: '17692535009230'
+      sourceHandle: source
+      target: '1772597341854'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: agent
+        targetType: variable-aggregator
+      id: 1772597114397-source-1772597341854-target
+      selected: false
+      source: '1772597114397'
+      sourceHandle: source
+      target: '1772597341854'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: if-else
+      id: edge_if_market
+      selected: false
+      source: '1772591435388'
+      sourceHandle: source
+      target: baac_if_market
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: if-else
+      id: edge_if_forecast
+      selected: false
+      source: '1772591435388'
+      sourceHandle: source
+      target: baac_if_forecast
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: knowledge-retrieval
+      id: edge_rag_retrieval
+      selected: false
+      source: baac_if_forecast
+      sourceHandle: 'true'
+      target: rag_knowledge_node
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: edge_rag_llm
+      selected: false
+      source: rag_knowledge_node
+      sourceHandle: source
+      target: rag_summary_llm
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: variable-aggregator
+      id: edge_rag_aggregator
+      selected: false
+      source: rag_summary_llm
+      sourceHandle: source
+      target: '1772597341854'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: parameter-extractor
+      id: baac_if_market-true-1774490296866-target
+      selected: false
+      source: baac_if_market
+      sourceHandle: 'true'
+      target: '1774490296866'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: parameter-extractor
+        targetType: http-request
+      id: 1774490296866-source-baac_matching_api-target
+      selected: false
+      source: '1774490296866'
+      sourceHandle: source
+      target: baac_matching_api
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: if-else
+      id: 1772591435388-source-1774500544960-target
+      selected: false
+      source: '1772591435388'
+      sourceHandle: source
+      target: '1774500544960'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: parameter-extractor
+      id: 1774500544960-true-17745008162610-target
+      selected: false
+      source: '1774500544960'
+      sourceHandle: 'true'
+      target: '17745008162610'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: parameter-extractor
+        targetType: http-request
+      id: 17745008162610-source-17745008212620-target
+      selected: false
+      source: '17745008162610'
+      sourceHandle: source
+      target: '17745008212620'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: http-request
+        targetType: llm
+      id: baac_matching_api-source-17745016989410-target
+      selected: false
+      source: baac_matching_api
+      sourceHandle: source
+      target: '17745016989410'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: variable-aggregator
+      id: 17745016989410-source-1772597341854-target
+      selected: false
+      source: '17745016989410'
+      sourceHandle: source
+      target: '1772597341854'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: http-request
+        targetType: llm
+      id: 17745008212620-source-baac_matching_summary_llm-target
+      selected: false
+      source: '17745008212620'
+      sourceHandle: source
+      target: baac_matching_summary_llm
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: variable-aggregator
+      id: baac_matching_summary_llm-source-1772597341854-target
+      selected: false
+      source: baac_matching_summary_llm
+      sourceHandle: source
+      target: '1772597341854'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: 1769248238853-source-1774519921694-target
+      selected: false
+      source: '1769248238853'
+      sourceHandle: source
+      target: '1774519921694'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: answer
+      id: 1774519921694-source-1769248251809-target
+      selected: false
+      source: '1774519921694'
+      sourceHandle: source
+      target: '1769248251809'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: if-else
+      id: 1772591435388-source-1774580673877-target
+      selected: false
+      source: '1772591435388'
+      sourceHandle: source
+      target: '1774580673877'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: http-request
+      id: 1774580673877-true-1774580759965-target
+      selected: false
+      source: '1774580673877'
+      sourceHandle: 'true'
+      target: '1774580759965'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: http-request
+        targetType: code
+      id: 1774580759965-source-1774580804380-target
+      selected: false
+      source: '1774580759965'
+      sourceHandle: source
+      target: '1774580804380'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: llm
+      id: 1774580804380-source-1774581638209-target
+      selected: false
+      source: '1774580804380'
+      sourceHandle: source
+      target: '1774581638209'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: variable-aggregator
+      id: 1774581638209-source-1772597341854-target
+      selected: false
+      source: '1774581638209'
+      sourceHandle: source
+      target: '1772597341854'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        selected: false
+        title: User Input
+        type: start
+        variables: []
+      height: 73
+      id: '1769246337707'
+      position:
+        x: 60.628662660415785
+        y: 475
+      positionAbsolute:
+        x: 60.628662660415785
+        y: 475
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        agent_parameters:
+          instruction:
+            type: constant
+            value: 'คุณคือผู้เชี่ยวชาญด้านราคาสินค้าเกษตรไทย
+
+
+              ## หน้าที่
+
+              ค้นหาและรายงานราคาพืชผลการเกษตรที่เป็นปัจจุบัน
+
+
+              ## วิธีค้นหา (DuckDuckGo)
+
+              ค้นหาตามลำดับจนได้ข้อมูล:
+
+              1. "ราคา [crop_name] วันนี้ [location]"
+
+              2. "ราคารับซื้อ [crop_name] ล่าสุด"
+
+              3. "[crop_name] ราคาตลาด ล่าสุด"
+
+              4. "ราคาประกัน [crop_name]" (ถ้าเป็นพืชที่มีประกันรายได้)
+
+
+              ## แหล่งที่น่าเชื่อถือ (ให้ความสำคัญ)
+
+              - oae.go.th (สำนักงานเศรษฐกิจการเกษตร)
+
+              - dit.go.th (กรมการค้าภายใน)
+
+              - taladthai.com (ตลาดไท)
+
+
+              ## รูปแบบการตอบ
+
+              ตอบกระชับ ประกอบด้วย:
+
+              - ราคาปัจจุบัน + วันที่อ้างอิง
+
+              - หน่วย (บาท/กก., บาท/ตัน)
+
+              - แยกราคาตามเกรด/ประเภท (ถ้ามี)
+
+              - แยกราคาตลาดกลาง vs หน้าสวน/ไร่
+
+              - แนวโน้มราคา (ขึ้น/ลง/ทรงตัว)
+
+              - ใส่อ้างอิงด้วยแต่ไม่ต้องใส่ url
+
+
+              ## ข้อควรระวัง
+
+              - ต้องระบุวันที่ของราคาเสมอ
+
+              - ถ้าหาราคาปัจจุบันไม่ได้ ให้ใช้ราคาล่าสุดที่หาได้ + ระบุวันที่ชัดเจน
+
+              - ถ้ามี location ให้หาเฉพาะพื้นที่นั้น ๆ
+
+              - ถ้าไม่มีข้อมูล ให้บอกตรงๆ ว่าไม่พบ
+
+              - ให้ตอบเป็น plain text เท่านั้น ห้ามใช้ markdown เด็ดขาด เช่น *** หรือ
+              ## '
+          maximum_iterations:
+            type: constant
+            value: 3
+          model:
+            type: constant
+            value:
+              completion_params: {}
+              mode: chat
+              model: ptm-oss-120b
+              model_type: llm
+              provider: yangyaofei/vllm/vllm
+              type: model-selector
+          query:
+            type: constant
+            value: '{{#sys.query#}}'
+          tools:
+            type: constant
+            value:
+            - enabled: true
+              extra:
+                description: Perform searches on DuckDuckGo and get results.
+              parameters:
+                query:
+                  auto: 1
+                  value: null
+              provider_name: langgenius/duckduckgo/duckduckgo
+              provider_show_name: langgenius/duckduckgo/duckduckgo
+              schemas:
+              - auto_generate: null
+                default: null
+                form: llm
+                human_description:
+                  en_US: The search query.
+                  ja_JP: The search query.
+                  pt_BR: The search query.
+                  zh_Hans: 搜索查询语句。
+                label:
+                  en_US: Query string
+                  ja_JP: Query string
+                  pt_BR: Query string
+                  zh_Hans: 查询语句
+                llm_description: Key words for searching
+                max: null
+                min: null
+                name: query
+                options: []
+                placeholder: null
+                precision: null
+                required: true
+                scope: null
+                template: null
+                type: string
+              - auto_generate: null
+                default: 5
+                form: form
+                human_description:
+                  en_US: The maximum number of results to return.
+                  ja_JP: The maximum number of results to return.
+                  pt_BR: The maximum number of results to return.
+                  zh_Hans: 最大结果数量
+                label:
+                  en_US: Max results
+                  ja_JP: Max results
+                  pt_BR: Max results
+                  zh_Hans: 最大结果数量
+                llm_description: ''
+                max: null
+                min: null
+                name: max_results
+                options: []
+                placeholder: null
+                precision: null
+                required: true
+                scope: null
+                template: null
+                type: number
+              - auto_generate: null
+                default: false
+                form: form
+                human_description:
+                  en_US: Whether to pass the search results to llm for summarization.
+                  ja_JP: Whether to pass the search results to llm for summarization.
+                  pt_BR: Whether to pass the search results to llm for summarization.
+                  zh_Hans: 是否需要将搜索结果传给大模型总结
+                label:
+                  en_US: Require Summary
+                  ja_JP: Require Summary
+                  pt_BR: Require Summary
+                  zh_Hans: 是否总结
+                llm_description: ''
+                max: null
+                min: null
+                name: require_summary
+                options: []
+                placeholder: null
+                precision: null
+                required: false
+                scope: null
+                template: null
+                type: boolean
+              - auto_generate: null
+                default: null
+                form: form
+                human_description:
+                  en_US: 'Supports http/https/socks proxies. Example: http://user:pass@example.com:3128.'
+                  ja_JP: 'Supports http/https/socks proxies. Example: http://user:pass@example.com:3128.'
+                  pt_BR: 'Supports http/https/socks proxies. Example: http://user:pass@example.com:3128.'
+                  zh_Hans: 支持 http/https/socks 代理。示例：http://user:pass@example.com:3128。
+                label:
+                  en_US: Proxy server
+                  ja_JP: Proxy server
+                  pt_BR: Proxy server
+                  zh_Hans: 代理服务器
+                llm_description: ''
+                max: null
+                min: null
+                name: proxy_server
+                options: []
+                placeholder: null
+                precision: null
+                required: false
+                scope: null
+                template: null
+                type: string
+              settings:
+                max_results:
+                  value:
+                    type: constant
+                    value: 5
+                proxy_server:
+                  value:
+                    type: mixed
+                    value: null
+                require_summary:
+                  value:
+                    type: constant
+                    value: true
+              tool_description: Perform searches on DuckDuckGo and get results.
+              tool_label: DuckDuckGo Search
+              tool_name: ddgo_search
+              type: builtin
+        agent_strategy_label: FunctionCalling
+        agent_strategy_name: function_calling
+        agent_strategy_provider_name: langgenius/agent/agent
+        memory:
+          query_prompt_template: '{{#sys.query#}}
+
+
+            {{#sys.files#}}'
+          window:
+            enabled: false
+            size: 50
+        meta:
+          minimum_dify_version: 1.7.0
+          version: 0.0.2
+        output_schema: {}
+        plugin_unique_identifier: langgenius/agent:0.0.30@8e6a5ed91535194ff84d1e6917f7fc81c3e063237245fc959fd6047991ce8e71
+        selected: false
+        title: Price Agent
+        tool_node_version: '2'
+        type: agent
+      height: 188
+      id: '1769246936158'
+      position:
+        x: 2112
+        y: -138.64581973058577
+      positionAbsolute:
+        x: 2112
+        y: -138.64581973058577
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        agent_parameters:
+          instruction:
+            type: constant
+            value: "คุณคือนักวิชาการเกษตรครบวงจร เชี่ยวชาญทั้งด้านการปลูกพืช การเลี้ยงสัตว์\
+              \ และการป้องกันกำจัดศัตรูพืช/โรคสัตว์\n\n## หน้าที่\nให้ข้อมูลครอบคลุมทุกด้านการเกษตร\
+              \ ได้แก่:\n- วิธีการปลูก การดูแล ระบบน้ำ และเทคนิคการเพาะปลูก\n- การเลี้ยงสัตว์\
+              \ การดูแลสุขภาพสัตว์\n- โรคพืช โรคสัตว์ แมลงศัตรู และวิธีป้องกันกำจัด\n\
+              \n## วิธีค้นหา (DuckDuckGo)\nค้นหาตามหัวข้อที่เกี่ยวข้อง:\n1. \"วิธีปลูก/เลี้ยง\
+              \ [crop/animal] [location]\"\n2. \"[crop/animal] การให้น้ำ ระบบน้ำหยด\"\
+              \n3. \"[crop/animal] ปุ๋ย/อาหาร สูตร อัตรา\"\n4. \"พันธุ์ [crop/animal]\
+              \ แนะนำ [location]\"\n5. \"[crop/animal] ระยะปลูก/เลี้ยง\"\n6. \"[crop/animal]\
+              \ เก็บเกี่ยว/จำหน่าย กี่เดือน\"\n7. \"โรค [crop/animal] ที่พบบ่อย [location]\"\
+              \n8. \"แมลงศัตรู [crop] หรือ โรคระบาด [animal] [time_period]\"\n9. \"\
+              สารเคมี/ชีวภัณฑ์ กำจัด โรค/แมลง [crop/animal]\"\n\n## แหล่งที่น่าเชื่อถือ\n\
+              - doa.go.th (กรมวิชาการเกษตร)\n- doae.go.th (กรมส่งเสริมการเกษตร)\n\
+              - rid.go.th (กรมชลประทาน)\n- dld.go.th (กรมปศุสัตว์)\n- มหาวิทยาลัยเกษตรศาสตร์และมหาวิทยาลัยที่มีคณะเกษตร\n\
+              \n## รูปแบบการตอบ\n\n### การปลูก/การเลี้ยง\n- พันธุ์ที่แนะนำ (เหมาะกับ\
+              \ location)\n- การเตรียมดิน/แปลง/โรงเรือน\n- ระยะปลูก/ความหนาแน่น จำนวนต้น-ตัวต่อไร่\n\
+              - ระบบน้ำที่เหมาะสม (น้ำหยด/สปริงเกอร์/ท่วมแปลง)\n- ปริมาณน้ำที่ต้องการ\
+              \ (ลิตร/ต้น/วัน หรือ มม./สัปดาห์)\n- ปุ๋ย/อาหารสัตว์: สูตร + อัตรา +\
+              \ ช่วงเวลา\n- ระยะเวลาเก็บเกี่ยว/จำหน่าย\n\n### โรค แมลง และการป้องกันกำจัด\n\
+              สำหรับแต่ละโรค/แมลงที่สำคัญ:\n- ชื่อโรค/แมลง + อาการที่สังเกตได้\n-\
+              \ ช่วงเวลาที่มักระบาด\n- วิธีป้องกัน\n- วิธีกำจัด:\n  - แบบเคมี: ชื่อสาร\
+              \ + อัตราใช้\n  - แบบชีวภาพ/อินทรีย์: ทางเลือก\n- ระยะหยุดใช้สารก่อนเก็บเกี่ยว\n\
+              - ใส่อ้างอิงด้วยแต่ไม่ต้องใส่ url\n\n## ข้อควรระวัง\n- ปรับคำแนะนำตาม\
+              \ location (ภาคอีสานแล้ง / ภาคใต้ฝนเยอะ)\n- ถ้ามี area_size ให้คำนวณปริมาณที่ต้องใช้จริง\n\
+              - ถ้ามี time_period ให้บอกว่าเหมาะสมหรือไม่ และเน้นโรค/แมลงที่ระบาดในช่วงนั้น\n\
+              - แนะนำทั้งแบบเคมีและอินทรีย์เสมอ\n- เตือนเรื่องความปลอดภัยในการใช้สารเคมี\n\
+              - ถ้าอาการไม่ชัดเจน แนะนำให้ปรึกษาเกษตรอำเภอ\n- ให้ตอบเป็น plain text\
+              \ เท่านั้น ห้ามใช้ markdown เด็ดขาด เช่น *** หรือ ## "
+          maximum_iterations:
+            type: constant
+            value: 3
+          model:
+            type: constant
+            value:
+              completion_params: {}
+              mode: chat
+              model: ptm-oss-120b
+              model_type: llm
+              provider: yangyaofei/vllm/vllm
+              type: model-selector
+          query:
+            type: constant
+            value: '{{#sys.query#}}'
+          tools:
+            type: constant
+            value:
+            - enabled: true
+              extra:
+                description: Perform searches on DuckDuckGo and get results.
+              parameters:
+                query:
+                  auto: 1
+                  value: null
+              provider_name: langgenius/duckduckgo/duckduckgo
+              provider_show_name: langgenius/duckduckgo/duckduckgo
+              schemas:
+              - auto_generate: null
+                default: null
+                form: llm
+                human_description:
+                  en_US: The search query.
+                  ja_JP: The search query.
+                  pt_BR: The search query.
+                  zh_Hans: 搜索查询语句。
+                label:
+                  en_US: Query string
+                  ja_JP: Query string
+                  pt_BR: Query string
+                  zh_Hans: 查询语句
+                llm_description: Key words for searching
+                max: null
+                min: null
+                name: query
+                options: []
+                placeholder: null
+                precision: null
+                required: true
+                scope: null
+                template: null
+                type: string
+              - auto_generate: null
+                default: 5
+                form: form
+                human_description:
+                  en_US: The maximum number of results to return.
+                  ja_JP: The maximum number of results to return.
+                  pt_BR: The maximum number of results to return.
+                  zh_Hans: 最大结果数量
+                label:
+                  en_US: Max results
+                  ja_JP: Max results
+                  pt_BR: Max results
+                  zh_Hans: 最大结果数量
+                llm_description: ''
+                max: null
+                min: null
+                name: max_results
+                options: []
+                placeholder: null
+                precision: null
+                required: true
+                scope: null
+                template: null
+                type: number
+              - auto_generate: null
+                default: false
+                form: form
+                human_description:
+                  en_US: Whether to pass the search results to llm for summarization.
+                  ja_JP: Whether to pass the search results to llm for summarization.
+                  pt_BR: Whether to pass the search results to llm for summarization.
+                  zh_Hans: 是否需要将搜索结果传给大模型总结
+                label:
+                  en_US: Require Summary
+                  ja_JP: Require Summary
+                  pt_BR: Require Summary
+                  zh_Hans: 是否总结
+                llm_description: ''
+                max: null
+                min: null
+                name: require_summary
+                options: []
+                placeholder: null
+                precision: null
+                required: false
+                scope: null
+                template: null
+                type: boolean
+              - auto_generate: null
+                default: null
+                form: form
+                human_description:
+                  en_US: 'Supports http/https/socks proxies. Example: http://user:pass@example.com:3128.'
+                  ja_JP: 'Supports http/https/socks proxies. Example: http://user:pass@example.com:3128.'
+                  pt_BR: 'Supports http/https/socks proxies. Example: http://user:pass@example.com:3128.'
+                  zh_Hans: 支持 http/https/socks 代理。示例：http://user:pass@example.com:3128。
+                label:
+                  en_US: Proxy server
+                  ja_JP: Proxy server
+                  pt_BR: Proxy server
+                  zh_Hans: 代理服务器
+                llm_description: ''
+                max: null
+                min: null
+                name: proxy_server
+                options: []
+                placeholder: null
+                precision: null
+                required: false
+                scope: null
+                template: null
+                type: string
+              settings:
+                max_results:
+                  value:
+                    type: constant
+                    value: 5
+                proxy_server:
+                  value:
+                    type: mixed
+                    value: null
+                require_summary:
+                  value:
+                    type: constant
+                    value: true
+              tool_description: Perform searches on DuckDuckGo and get results.
+              tool_label: DuckDuckGo Search
+              tool_name: ddgo_search
+              type: builtin
+        agent_strategy_label: FunctionCalling
+        agent_strategy_name: function_calling
+        agent_strategy_provider_name: langgenius/agent/agent
+        memory:
+          query_prompt_template: '{{#sys.query#}}
+
+
+            {{#sys.files#}}'
+          window:
+            enabled: false
+            size: 50
+        meta:
+          minimum_dify_version: 1.7.0
+          version: 0.0.2
+        output_schema: {}
+        plugin_unique_identifier: langgenius/agent:0.0.30@8e6a5ed91535194ff84d1e6917f7fc81c3e063237245fc959fd6047991ce8e71
+        selected: false
+        title: Cultivation Agent
+        tool_node_version: '2'
+        type: agent
+      height: 188
+      id: '1769246938196'
+      position:
+        x: 2112
+        y: 83.93355373047024
+      positionAbsolute:
+        x: 2112
+        y: 83.93355373047024
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        agent_parameters:
+          instruction:
+            type: constant
+            value: 'คุณคือผู้เชี่ยวชาญด้านสภาพอากาศ ภูมิอากาศการเกษตร และภูมิศาสตร์การเกษตร
+
+
+              ## หน้าที่
+
+              ให้ข้อมูลสภาพอากาศ พยากรณ์ คำแนะนำการเกษตรตามฤดูกาล รวมถึงลักษณะภูมิประเทศ
+
+              ประเภทดิน และความเหมาะสมของพื้นที่สำหรับการเกษตร
+
+
+              ## วิธีค้นหา (DuckDuckGo)
+
+
+              ค้นหาตามความต้องการ:
+
+              1. "พยากรณ์อากาศ [location] การเกษตร"
+
+              2. "ปริมาณน้ำฝน [location] [time_period]"
+
+              3. "ฤดูกาลเพาะปลูก [crop_name] [location]"
+
+              4. "ช่วงเวลาปลูก [crop_name] ที่เหมาะสม"
+
+              5. "เตือนภัย น้ำท่วม ภัยแล้ง [location]"
+
+              6. "[crop_name] อุณหภูมิ ความชื้น ที่เหมาะสม"
+
+              7. "ประเภทดิน [location] เหมาะปลูกอะไร"
+
+              8. "ลักษณะดิน [location] ค่า pH ความอุดมสมบูรณ์"
+
+              9. "พื้นที่เกษตรกรรม [location] ภูมิประเทศ"
+
+              10. "ที่ดิน [location] เหมาะสม [crop_name]"
+
+
+              ## แหล่งที่น่าเชื่อถือ (ให้ความสำคัญ)
+
+              - tmd.go.th (กรมอุตุนิยมวิทยา)
+
+              - thaiwater.net (สถาบันสารสนเทศทรัพยากรน้ำ)
+
+              - irrigation.rid.go.th (กรมชลประทาน)
+
+              - disaster.go.th (กรมป้องกันภัยพิบัติ)
+
+              - ldd.go.th (กรมพัฒนาที่ดิน - ประเภทดิน/ที่ดิน)
+
+              - gistda.or.th (GISTDA - ข้อมูลภูมิสารสนเทศ)
+
+
+              ## รูปแบบการตอบ
+
+
+              ### สภาพอากาศ
+
+              - สภาพอากาศปัจจุบัน/พยากรณ์ของ location
+
+              - ปริมาณน้ำฝนเฉลี่ย/คาดการณ์
+
+              - ช่วงเวลาที่เหมาะสมในการปลูก [crop_name]
+
+              - คำเตือนภัยพิบัติ (ถ้ามี)
+
+              - สภาพอากาศที่ [crop_name] ต้องการ vs สภาพจริงของ location
+
+
+              ### ภูมิศาสตร์และที่ดิน
+
+              - ลักษณะภูมิประเทศของ location (ที่ราบ/ที่ดอน/ลุ่ม)
+
+              - ประเภทดินที่พบใน location และค่า pH โดยประมาณ
+
+              - ความเหมาะสมของดินสำหรับ [crop_name]
+
+              - ข้อจำกัดของพื้นที่ (ดินเค็ม/ดินทราย/พื้นที่น้ำท่วม)
+
+              - คำแนะนำการปรับปรุงดินถ้าจำเป็น
+
+
+              ### สรุปความเหมาะสม
+
+              - คำแนะนำ: ปลูกได้เลย / รอช่วง / ต้องเตรียมรับมือ / ไม่แนะนำพร้อมเหตุผล
+
+              - ใส่อ้างอิงด้วยแต่ไม่ต้องใส่ url
+
+
+              ## ข้อควรระวัง
+
+              - ระบุวันที่ของข้อมูลพยากรณ์เสมอ
+
+              - เตือนว่าพยากรณ์ระยะยาวมีความไม่แน่นอน
+
+              - เชื่อมโยงสภาพอากาศและดินกับการปลูก [crop_name] โดยเฉพาะ
+
+              - ถ้า time_period ไม่เหมาะ ให้แนะนำช่วงที่ดีกว่า
+
+              - ข้อมูลดินเป็นค่าเฉลี่ยระดับพื้นที่ ควรตรวจสอบดินจริงก่อนลงทุน
+
+              - ให้ตอบเป็น plain text เท่านั้น ห้ามใช้ markdown เด็ดขาด เช่น *** หรือ
+              ## '
+          maximum_iterations:
+            type: constant
+            value: 3
+          model:
+            type: constant
+            value:
+              completion_params: {}
+              mode: chat
+              model: ptm-oss-120b
+              model_type: llm
+              provider: yangyaofei/vllm/vllm
+              type: model-selector
+          query:
+            type: constant
+            value: '{{#sys.query#}}'
+          tools:
+            type: constant
+            value:
+            - enabled: true
+              extra:
+                description: Perform searches on DuckDuckGo and get results.
+              parameters:
+                query:
+                  auto: 1
+                  value: null
+              provider_name: langgenius/duckduckgo/duckduckgo
+              provider_show_name: langgenius/duckduckgo/duckduckgo
+              schemas:
+              - auto_generate: null
+                default: null
+                form: llm
+                human_description:
+                  en_US: The search query.
+                  ja_JP: The search query.
+                  pt_BR: The search query.
+                  zh_Hans: 搜索查询语句。
+                label:
+                  en_US: Query string
+                  ja_JP: Query string
+                  pt_BR: Query string
+                  zh_Hans: 查询语句
+                llm_description: Key words for searching
+                max: null
+                min: null
+                name: query
+                options: []
+                placeholder: null
+                precision: null
+                required: true
+                scope: null
+                template: null
+                type: string
+              - auto_generate: null
+                default: 5
+                form: form
+                human_description:
+                  en_US: The maximum number of results to return.
+                  ja_JP: The maximum number of results to return.
+                  pt_BR: The maximum number of results to return.
+                  zh_Hans: 最大结果数量
+                label:
+                  en_US: Max results
+                  ja_JP: Max results
+                  pt_BR: Max results
+                  zh_Hans: 最大结果数量
+                llm_description: ''
+                max: null
+                min: null
+                name: max_results
+                options: []
+                placeholder: null
+                precision: null
+                required: true
+                scope: null
+                template: null
+                type: number
+              - auto_generate: null
+                default: false
+                form: form
+                human_description:
+                  en_US: Whether to pass the search results to llm for summarization.
+                  ja_JP: Whether to pass the search results to llm for summarization.
+                  pt_BR: Whether to pass the search results to llm for summarization.
+                  zh_Hans: 是否需要将搜索结果传给大模型总结
+                label:
+                  en_US: Require Summary
+                  ja_JP: Require Summary
+                  pt_BR: Require Summary
+                  zh_Hans: 是否总结
+                llm_description: ''
+                max: null
+                min: null
+                name: require_summary
+                options: []
+                placeholder: null
+                precision: null
+                required: false
+                scope: null
+                template: null
+                type: boolean
+              - auto_generate: null
+                default: null
+                form: form
+                human_description:
+                  en_US: 'Supports http/https/socks proxies. Example: http://user:pass@example.com:3128.'
+                  ja_JP: 'Supports http/https/socks proxies. Example: http://user:pass@example.com:3128.'
+                  pt_BR: 'Supports http/https/socks proxies. Example: http://user:pass@example.com:3128.'
+                  zh_Hans: 支持 http/https/socks 代理。示例：http://user:pass@example.com:3128。
+                label:
+                  en_US: Proxy server
+                  ja_JP: Proxy server
+                  pt_BR: Proxy server
+                  zh_Hans: 代理服务器
+                llm_description: ''
+                max: null
+                min: null
+                name: proxy_server
+                options: []
+                placeholder: null
+                precision: null
+                required: false
+                scope: null
+                template: null
+                type: string
+              settings:
+                max_results:
+                  value:
+                    type: constant
+                    value: 5
+                proxy_server:
+                  value:
+                    type: mixed
+                    value: null
+                require_summary:
+                  value:
+                    type: constant
+                    value: false
+              tool_description: Perform searches on DuckDuckGo and get results.
+              tool_label: DuckDuckGo Search
+              tool_name: ddgo_search
+              type: builtin
+        agent_strategy_label: FunctionCalling
+        agent_strategy_name: function_calling
+        agent_strategy_provider_name: langgenius/agent/agent
+        memory:
+          query_prompt_template: '{{#sys.query#}}
+
+
+            {{#sys.files#}}'
+          window:
+            enabled: false
+            size: 50
+        meta:
+          minimum_dify_version: 1.7.0
+          version: 0.0.2
+        output_schema: {}
+        plugin_unique_identifier: langgenius/agent:0.0.30@8e6a5ed91535194ff84d1e6917f7fc81c3e063237245fc959fd6047991ce8e71
+        selected: false
+        title: Geo Weather Agent
+        tool_node_version: '2'
+        type: agent
+      height: 188
+      id: '1769246947033'
+      position:
+        x: 2112
+        y: 305.64094147086456
+      positionAbsolute:
+        x: 2112
+        y: 305.64094147086456
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        memory:
+          query_prompt_template: '{{#sys.query#}}
+
+
+            {{#sys.files#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: false
+            size: 50
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: ptm-oss-120b
+          provider: yangyaofei/vllm/vllm
+        prompt_template:
+        - id: 56e06efe-d459-4984-8815-9742f70261a4
+          role: system
+          text: "คุณคือผู้ช่วยสรุปข้อมูลการเกษตร ชื่อ Kumaru หมีใหญ่ใจดีมาดวัยรุ่นสุดสดใส\
+            \ ผู้เชี่ยวชาญด้านการสรุปข้อมูลเกษตร\n\nบุคลิกและสไตล์การตอบ เป็นกันเอง\
+            \ พูดจาสุภาพแต่สนุกสนาน (มี \"ครับผม!\") พลังงานล้น ใช้ภาษากระฉับกระเฉง\
+            \ เข้าใจง่าย ใช้แทนตัวเองว่าผม จริงใจ พร้อมช่วยเหลือและส่งต่อความรู้ด้วยความใส่ใจ\
+            \ \n\n## หน้าที่ รวบรวมข้อมูลจาก Agent ต่างๆ แล้วสรุปเป็นคำตอบที่ครบถ้วนและอ่านง่าย\
+            \ ## วิธีสรุป \n1. อ่านคำถามเดิมของผู้ใช้ให้เข้าใจว่าต้องการอะไร \n2.\
+            \ รวบรวมข้อมูลจาก Agent ที่เกี่ยวข้อง \n3. จัดเรียงลำดับตามความสำคัญ/ตามที่ผู้ใช้ถาม\
+            \ \n4. ตัดข้อมูลที่ซ้ำซ้อนออก \n5. สรุปเป็นคำตอบที่กระชับ อ่านง่าย \n\
+            6. ให้ตอบเป็น plain text เท่านั้น ห้ามใช้ markdown เด็ดขาด เช่น ** หรือ\
+            \ ## \n\n## รูปแบบการตอบ \n- ตอบตรงคำถามก่อน \n- ให้รายละเอียดสนับสนุน\
+            \ \n- สรุปข้อแนะนำ/ข้อควรระวัง \n- ใช้ภาษาที่เกษตรกรเข้าใจง่าย \n- ถ้าข้อมูลขัดแย้งกัน\
+            \ ให้บอกและแนะนำข้อมูลที่น่าเชื่อถือกว่า \n\n## ข้อควรระวัง \n- ถ้า Agent\
+            \ ใดไม่พบข้อมูล ให้ข้ามไป ไม่ต้องกล่าวถึง \n- ไม่ต้องบอกว่าข้อมูลมาจาก\
+            \ Agent ไหน แต่ต้องบอกแหล่งอ้างอิงที่ได้รับมาแต่ไม่ต้องบอก url\n- ตอบเหมือนผู้เชี่ยวชาญคนเดียวที่รู้ครบทุกด้าน\
+            \ \n- ห้ามขึ้นต้นด้วย \"สวัสดี\" หรือแนะนำตัวใหม่ทุกครั้ง ให้ตอบตรงประเด็นได้เลย\
+            \ ยกเว้นเมื่อผู้ใช้ทักทายมาเป็นครั้งแรก \n- ถ้า context ที่ได้รับมามี\
+            \ markdown เช่น ** หรือ ## ให้แปลงเป็น plain text ก่อนตอบเสมอ \n- ถ้าเป็นคำถามที่เกี่ยวกับสถานการณ์น้ำมัน\
+            \ หรือการเติมน้ำมัน ให้อธิบายสถานการณ์ตาม context ให้ครบด้วย ถ้าไม่มีข้อมูลวันนี้ก็เอาล่าสุดได้\
+            \ แล้วบอกวันที่ที่อัพเดต"
+        - id: 79d212b7-11ff-4e83-b774-c95ee00d6383
+          role: user
+          text: 'คำถามจาก user: {{#sys.query#}}
+
+
+            ผลลัพธ์จาก Agent ต่างๆ  (ถ้ามี)
+
+            {{#1772597341854.output#}}'
+        reasoning_format: separated
+        selected: false
+        structured_output_enabled: false
+        title: KUMARU
+        type: llm
+        vision:
+          enabled: false
+      height: 88
+      id: '1769248238853'
+      position:
+        x: 3310.169110933805
+        y: 684.6098417845421
+      positionAbsolute:
+        x: 3310.169110933805
+        y: 684.6098417845421
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        answer: '{{#1774519921694.result#}}'
+        selected: false
+        title: Answer
+        type: answer
+        variables: []
+      height: 102
+      id: '1769248251809'
+      position:
+        x: 4025.271509917251
+        y: 648.4145319740832
+      positionAbsolute:
+        x: 4025.271509917251
+        y: 648.4145319740832
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        agent_parameters:
+          instruction:
+            type: constant
+            value: 'คุณคือนักวิเคราะห์เศรษฐกิจการเกษตร
+
+
+              ## หน้าที่
+
+              วิเคราะห์ต้นทุน ผลตอบแทน และความคุ้มค่าในการปลูกพืช
+
+
+              ## วิธีค้นหา (DuckDuckGo)
+
+              ค้นหาตามลำดับ:
+
+              1. "ต้นทุน ปลูก [crop_name] ต่อไร่ ล่าสุด"
+
+              2. "[crop_name] ผลผลิต เฉลี่ย ต่อไร่"
+
+              3. "[crop_name] กำไร ขาดทุน"
+
+              4. "ลงทุน ปลูก [crop_name] คุ้มไหม"
+
+              5. "[crop_name] ระยะคืนทุน" (พืชยืนต้น)
+
+              6. "ต้นทุน [crop_name] [location]"
+
+
+              ## แหล่งที่น่าเชื่อถือ (ให้ความสำคัญ)
+
+              - oae.go.th (สำนักงานเศรษฐกิจการเกษตร)
+
+              - baac.or.th (ธ.ก.ส.)
+
+              - doae.go.th (กรมส่งเสริมการเกษตร)
+
+
+              ## รูปแบบการตอบ
+
+              คำนวณและแสดงผลตาม area_size (ถ้าไม่มีใช้ 1 ไร่):
+
+
+              - ต้นทุนการผลิต:
+
+              - ค่าพันธุ์/ต้นกล้า: xxx บาท
+
+              - ค่าปุ๋ย/สารเคมี: xxx บาท
+
+              - ค่าแรงงาน: xxx บาท
+
+              - ค่าน้ำ/ไฟ: xxx บาท
+
+              - ค่าเช่าที่ (ถ้ามี): xxx บาท
+
+              - รวมต้นทุน: xxx บาท
+
+
+              รายได้:
+
+              - ผลผลิตเฉลี่ย: xxx กก./ไร่
+
+              - ราคาปัจจุบัน: xxx บาท/กก.
+
+              - รายได้รวม: xxx บาท
+
+
+              สรุป:
+
+              - กำไร/ขาดทุน: xxx บาท
+
+              - กำไรต่อไร่: xxx บาท
+
+              - ระยะคืนทุน: x ปี (พืชยืนต้น)
+
+
+              ความเสี่ยง:
+
+              - ความผันผวนราคา: สูง/กลาง/ต่ำ
+
+              - ความเสี่ยงโรค/แมลง: สูง/กลาง/ต่ำ
+
+              - ความเสี่ยงสภาพอากาศ: สูง/กลาง/ต่ำ
+
+
+              ## ข้อควรระวัง
+
+              - ระบุปี/แหล่งข้อมูลต้นทุนเสมอ
+
+              - ถ้ามี area_size ให้คำนวณตามพื้นที่จริง
+
+              - แยกต้นทุนปีแรก vs ปีถัดไป (พืชยืนต้น)
+
+              - เตือนว่าราคาผันผวน ตัวเลขเป็นประมาณการ
+
+              - ถ้าข้อมูลไม่ครบ ให้ประมาณการและระบุชัดเจน
+
+              - ใส่อ้างอิงด้วยแต่ไม่ต้องใส่ url
+
+              - ให้ตอบเป็น plain text เท่านั้น ห้ามใช้ markdown เด็ดขาด เช่น *** หรือ
+              ## '
+          maximum_iterations:
+            type: constant
+            value: 3
+          model:
+            type: constant
+            value:
+              completion_params: {}
+              mode: chat
+              model: ptm-oss-120b
+              model_type: llm
+              provider: yangyaofei/vllm/vllm
+              type: model-selector
+          query:
+            type: constant
+            value: '{{#sys.query#}}'
+          tools:
+            type: constant
+            value:
+            - enabled: true
+              extra:
+                description: Perform searches on DuckDuckGo and get results.
+              parameters:
+                query:
+                  auto: 1
+                  value: null
+              provider_name: langgenius/duckduckgo/duckduckgo
+              provider_show_name: langgenius/duckduckgo/duckduckgo
+              schemas:
+              - auto_generate: null
+                default: null
+                form: llm
+                human_description:
+                  en_US: The search query.
+                  ja_JP: The search query.
+                  pt_BR: The search query.
+                  zh_Hans: 搜索查询语句。
+                label:
+                  en_US: Query string
+                  ja_JP: Query string
+                  pt_BR: Query string
+                  zh_Hans: 查询语句
+                llm_description: Key words for searching
+                max: null
+                min: null
+                name: query
+                options: []
+                placeholder: null
+                precision: null
+                required: true
+                scope: null
+                template: null
+                type: string
+              - auto_generate: null
+                default: 5
+                form: form
+                human_description:
+                  en_US: The maximum number of results to return.
+                  ja_JP: The maximum number of results to return.
+                  pt_BR: The maximum number of results to return.
+                  zh_Hans: 最大结果数量
+                label:
+                  en_US: Max results
+                  ja_JP: Max results
+                  pt_BR: Max results
+                  zh_Hans: 最大结果数量
+                llm_description: ''
+                max: null
+                min: null
+                name: max_results
+                options: []
+                placeholder: null
+                precision: null
+                required: true
+                scope: null
+                template: null
+                type: number
+              - auto_generate: null
+                default: false
+                form: form
+                human_description:
+                  en_US: Whether to pass the search results to llm for summarization.
+                  ja_JP: Whether to pass the search results to llm for summarization.
+                  pt_BR: Whether to pass the search results to llm for summarization.
+                  zh_Hans: 是否需要将搜索结果传给大模型总结
+                label:
+                  en_US: Require Summary
+                  ja_JP: Require Summary
+                  pt_BR: Require Summary
+                  zh_Hans: 是否总结
+                llm_description: ''
+                max: null
+                min: null
+                name: require_summary
+                options: []
+                placeholder: null
+                precision: null
+                required: false
+                scope: null
+                template: null
+                type: boolean
+              - auto_generate: null
+                default: null
+                form: form
+                human_description:
+                  en_US: 'Supports http/https/socks proxies. Example: http://user:pass@example.com:3128.'
+                  ja_JP: 'Supports http/https/socks proxies. Example: http://user:pass@example.com:3128.'
+                  pt_BR: 'Supports http/https/socks proxies. Example: http://user:pass@example.com:3128.'
+                  zh_Hans: 支持 http/https/socks 代理。示例：http://user:pass@example.com:3128。
+                label:
+                  en_US: Proxy server
+                  ja_JP: Proxy server
+                  pt_BR: Proxy server
+                  zh_Hans: 代理服务器
+                llm_description: ''
+                max: null
+                min: null
+                name: proxy_server
+                options: []
+                placeholder: null
+                precision: null
+                required: false
+                scope: null
+                template: null
+                type: string
+              settings:
+                max_results:
+                  value:
+                    type: constant
+                    value: 5
+                proxy_server:
+                  value:
+                    type: mixed
+                    value: null
+                require_summary:
+                  value:
+                    type: constant
+                    value: false
+              tool_description: Perform searches on DuckDuckGo and get results.
+              tool_label: DuckDuckGo Search
+              tool_name: ddgo_search
+              type: builtin
+        agent_strategy_label: FunctionCalling
+        agent_strategy_name: function_calling
+        agent_strategy_provider_name: langgenius/agent/agent
+        memory:
+          query_prompt_template: '{{#sys.query#}}
+
+
+            {{#sys.files#}}'
+          window:
+            enabled: false
+            size: 50
+        meta:
+          minimum_dify_version: 1.7.0
+          version: 0.0.2
+        output_schema: {}
+        plugin_unique_identifier: langgenius/agent:0.0.30@8e6a5ed91535194ff84d1e6917f7fc81c3e063237245fc959fd6047991ce8e71
+        selected: false
+        title: Cost & Profit Agent
+        tool_node_version: '2'
+        type: agent
+      height: 188
+      id: '17692535009230'
+      position:
+        x: 2112
+        y: 522.301037264301
+      positionAbsolute:
+        x: 2112
+        y: 522.301037264301
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        classes:
+        - id: '1769256608701'
+          name: คำถามที่ผิดกฎหมาย
+        - id: '1'
+          name: คำถามอื่น ๆ
+        instruction: ''
+        instructions: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: ptm-oss-120b
+          provider: yangyaofei/vllm/vllm
+        query_variable_selector:
+        - '1769246337707'
+        - sys.query
+        selected: false
+        title: Question Classifier
+        type: question-classifier
+        vision:
+          enabled: false
+      height: 170
+      id: '1769256025212'
+      position:
+        x: 420.81726145854054
+        y: 414.87426746791687
+      positionAbsolute:
+        x: 420.81726145854054
+        y: 414.87426746791687
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        answer: 'ขออภัยผมไม่สามารถตอบคำถามนี้ได้ครับ
+
+          ผมเป็นผู้ช่วยด้านการเกษตรโดยเฉพาะ หากมีคำถามเกี่ยวกับการปลูกพืช ราคาผลผลิต
+          หรือเรื่องเกษตรอื่นๆ ยินดีช่วยครับ!'
+        selected: false
+        title: Answer 3
+        type: answer
+        variables: []
+      height: 148
+      id: '1769256628655'
+      position:
+        x: 770.6915289264573
+        y: 381.941540849552
+      positionAbsolute:
+        x: 770.6915289264573
+        y: 381.941540849552
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - sys
+          - query
+        memory:
+          query_prompt_template: '{{#sys.query#}}
+
+
+            {{#sys.files#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: false
+            size: 10
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: ptm-oss-120b
+          provider: yangyaofei/vllm/vllm
+        prompt_template:
+        - id: c2bc463b-fe22-4276-a15b-9bc5b2f8801f
+          role: system
+          text: "คุณคือระบบจำแนกประเภทคำถามด้านการเกษตร วิเคราะห์ว่าคำถามต้องใช้ผู้เชี่ยวชาญกี่คน\n\
+            \n## Agent ที่มีในระบบ\n- price_agent: ราคาพืชผล (ราคากลาง/ราคาตลาด) ราคาตลาดพืชผล\
+            \ แนวโน้มราคาพืชผล\n- cultivation_agent: การปลูก ดิน ปุ๋ย พันธุ์พืช ระบบน้ำ\
+            \ รวมถึงการเลี้ยงสัตว์ โรคพืช โรคสัตว์ แมลง การระบาด สารเคมี\n- geo_weather_agent:\
+            \ สภาพอากาศ ฝน ภัยแล้ง พยากรณ์อากาศ ประเภทดิน (เฉพาะบริบทการเกษตรเท่านั้น)\n\
+            - cost_profit_agent: ต้นทุน กำไร ROI การลงทุน\n- news_agent: ข่าวสาร นโยบายรัฐ\
+            \ โครงการช่วยเหลือ\n- baac_market_agent: ค้นหาสินค้าที่ขายใน BAAC Matching\
+            \ Platform ไว้สำหรับแนะนำสินค้า ถ้า user ถามถึง เช่น มีข้าวกล่องไหม หรือ\
+            \ สินค้าที่มีชื่อแบรนด์หรือชื่อสินค้าเฉพาะเจาะจง หรือ ถามว่า \"มีขายไหม\"\
+            , \"หาซื้อได้ที่ไหน\", \"แนะนำสินค้า\", [ชื่อสินค้า] ราคาเท่าไหร่\n- baac_forecast_agent:\
+            \ ข้อมูลคาดการณ์เศรษฐกิจและราคาสินค้าเกษตรจากรายงานของธกส. ปี 2568 - 2569\n\
+            -pumpradar_agent: สถานการณ์ปั๊มน้ำมัน น้ำมันหมดหรือยังในแต่ละจังหวัด หาเติมน้ำมันได้ที่ไหน\
+            \ น้ำมันมีขายไหม [จังหวัด]มีน้ำมันไหม น้ำมันขาดแคลน เติมน้ำมันได้ไหม\n\
+            - oil_price_agent: ให้ข้อมูลเรื่องราคาน้ำมัน\n\n## กฎ\n1. วิเคราะห์ว่าคำถามต้องการข้อมูลจาก\
+            \ agent ใดบ้าง\n2. ถ้าถามเรื่องเดียวชัดเจน → agents มี 1 ตัว\n3. ถ้าถามกว้างหรือต้องการหลายมุมมอง\
+            \ → agents มีหลายตัว\n4. ถ้าไม่มี agent ใดตรงกับคำถามอย่างชัดเจน ให้ใช้\
+            \ cultivation_agent เป็น default เสมอ\n5. ตอบเป็น JSON เท่านั้น ห้ามส่ง\
+            \ agents เป็น list ว่าง\n6. ค่า intent ต้องเป็น string และต้องอยู่ใน double\
+            \ quotes (\" \")\n7. ห้ามใช้ single quotes (' ')\n\n## ตัวอย่าง\nUser:\
+            \ \"มะละกอราคาเท่าไหร่วันนี้\"\nOutput: {\n  \"agents\": [\"price_agent\"\
+            ],\n  \"intent\": \"สอบถามราคามะละกอปัจจุบัน\"\n}\n\nUser: \"ปลูกอะไรดีช่วงนี้\"\
+            \nOutput: {\n  \"agents\": [\"cultivation_agent\", \"weather_agent\",\
+            \ \"price_agent\", \"cost_profit_agent\"],\n  \"intent\": \"วางแผนเลือกพืชที่เหมาะสมและคุ้มค่า\"\
+            \n}\n\nUser: \"ข้าวโพดใบเหลืองแล้วราคาตกด้วย จะทำยังไงดี\"\nOutput: {\n\
+            \  \"agents\": [\"cultivation_agent\", \"price_agent\"],\n  \"intent\"\
+            : \"แก้ปัญหาโรคพืชและประเมินสถานการณ์ราคา\"\n}\n\nUser: \"แนะนำการเลี้ยงไก่ที\"\
+            \nOutput: {\n  \"agents\": [\"cultivation_agent\"],\n  \"intent\": \"\
+            ขอคำแนะนำการเลี้ยงไก่\"\n}\n\nUser: \"กระบี่มีน้ำมันไหม\" Output: { \"\
+            agents\": [\"pumpradar_agent\"], \"intent\": \"ตรวจสอบสถานการณ์น้ำมันเชื้อเพลิงในจังหวัดกระบี่\"\
+            \ } \n\nUser: \"ภูเก็ตเติมน้ำมันได้ไหม\" Output: { \"agents\": [\"pumpradar_agent\"\
+            ], \"intent\": \"ตรวจสอบสถานการณ์น้ำมันเชื้อเพลิงในจังหวัดภูเก็ต\" }"
+        - id: 33c6df25-dd60-42ad-b52c-e56249bc23dd
+          role: user
+          text: '{{#context#}}'
+        reasoning_format: separated
+        selected: false
+        title: Intent Classifier
+        type: llm
+        vision:
+          enabled: false
+      height: 88
+      id: '1772590760612'
+      position:
+        x: 776.7543951924988
+        y: 590
+      positionAbsolute:
+        x: 776.7543951924988
+        y: 590
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        code: "import json\nimport re\n\ndef clean_intent(intent: str) -> str:\n \
+          \   intent = intent.strip('\"\\'#')\n    return intent.strip()\n\ndef extract_json(s:\
+          \ str) -> dict:\n    s = s.strip()\n    if not s:\n        raise ValueError(\"\
+          empty\")\n    try:\n        return json.loads(s)\n    except (json.JSONDecodeError,\
+          \ ValueError):\n        pass\n    m = re.search(r'\\{.*\\}', s, re.DOTALL)\n\
+          \    if m:\n        return json.loads(m.group())\n    raise ValueError(\"\
+          no JSON found\")\n\ndef main(llm_output: str, llm_reasoning: str) -> dict:\n\
+          \    for src in [llm_output, llm_reasoning]:\n        try:\n           \
+          \ data = extract_json(src)\n            break\n        except (json.JSONDecodeError,\
+          \ ValueError):\n            continue\n    else:\n        data = {\"agents\"\
+          : [\"cultivation_agent\"], \"intent\": \"\"}\n    agents = data.get(\"agents\"\
+          , []) or [\"cultivation_agent\"]\n\n    return {\n        \"intent\":  \
+          \          clean_intent(data.get(\"intent\", \"\")),\n        \"run_price\"\
+          :         \"price_agent\"         in agents,\n        \"run_cultivation\"\
+          :   \"cultivation_agent\"   in agents,\n        \"run_geo_weather\":   \"\
+          geo_weather_agent\"   in agents,\n        \"run_cost\":          \"cost_profit_agent\"\
+          \   in agents,\n        \"run_news\":          \"news_agent\"          in\
+          \ agents,\n        \"run_baac_market\":   \"baac_market_agent\"   in agents,\n\
+          \        \"run_baac_forecast\": \"baac_forecast_agent\" in agents,\n   \
+          \     \"run_pumpradar\": \"pumpradar_agent\" in agents,\n        \"run_oil_price\"\
+          : \"oil_price_agent\" in agents,\n\n    }"
+        code_language: python3
+        outputs:
+          intent:
+            children: null
+            type: string
+          run_baac_forecast:
+            children: null
+            type: boolean
+          run_baac_market:
+            children: null
+            type: boolean
+          run_cost:
+            children: null
+            type: boolean
+          run_cultivation:
+            children: null
+            type: boolean
+          run_geo_weather:
+            children: null
+            type: boolean
+          run_news:
+            children: null
+            type: boolean
+          run_oil_price:
+            children: null
+            type: boolean
+          run_price:
+            children: null
+            type: boolean
+          run_pumpradar:
+            children: null
+            type: boolean
+        selected: false
+        title: Code
+        type: code
+        variables:
+        - value_selector:
+          - '1772590760612'
+          - text
+          value_type: string
+          variable: llm_output
+        - value_selector:
+          - '1772590760612'
+          - reasoning_content
+          value_type: string
+          variable: llm_reasoning
+      height: 52
+      id: '1772591435388'
+      position:
+        x: 1091.8385152068252
+        y: 658.3235133952686
+      positionAbsolute:
+        x: 1091.8385152068252
+        y: 658.3235133952686
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: is
+            id: cond_run_price
+            value: 'true'
+            varType: string
+            variable_selector:
+            - '1772591435388'
+            - run_price
+          id: 'true'
+          logical_operator: and
+        selected: false
+        title: IF price_agent
+        type: if-else
+      height: 124
+      id: '8000000000000'
+      position:
+        x: 1624.491209615002
+        y: 18.953831359253755
+      positionAbsolute:
+        x: 1624.491209615002
+        y: 18.953831359253755
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: is
+            id: cond_run_cultivation
+            value: 'true'
+            varType: string
+            variable_selector:
+            - '1772591435388'
+            - run_cultivation
+          id: 'true'
+          logical_operator: and
+        selected: false
+        title: IF cultivation_agent
+        type: if-else
+      height: 124
+      id: '8000000000001'
+      position:
+        x: 1624.491209615002
+        y: 198.90570060093756
+      positionAbsolute:
+        x: 1624.491209615002
+        y: 198.90570060093756
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: is
+            id: cond_run_weather
+            value: true
+            varType: boolean
+            variable_selector:
+            - '1772591435388'
+            - run_geo_weather
+          id: 'true'
+          logical_operator: and
+        selected: false
+        title: IF weather_agent
+        type: if-else
+      height: 124
+      id: '8000000000002'
+      position:
+        x: 1624.491209615002
+        y: 376.30685731803396
+      positionAbsolute:
+        x: 1624.491209615002
+        y: 376.30685731803396
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: is
+            id: cond_run_cost
+            value: 'true'
+            varType: string
+            variable_selector:
+            - '1772591435388'
+            - run_cost
+          id: 'true'
+          logical_operator: and
+        selected: false
+        title: IF cost_profit_agent
+        type: if-else
+      height: 124
+      id: '8000000000004'
+      position:
+        x: 1624.491209615002
+        y: 550.2770379405217
+      positionAbsolute:
+        x: 1624.491209615002
+        y: 550.2770379405217
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: is
+            id: cond_run_news
+            value: 'true'
+            varType: string
+            variable_selector:
+            - '1772591435388'
+            - run_news
+          id: 'true'
+          logical_operator: and
+        selected: false
+        title: IF news_agent
+        type: if-else
+      height: 124
+      id: '8000000000005'
+      position:
+        x: 1624.491209615002
+        y: 731.3208742274703
+      positionAbsolute:
+        x: 1624.491209615002
+        y: 731.3208742274703
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        agent_parameters:
+          instruction:
+            type: constant
+            value: "คุณคือผู้สื่อข่าวและผู้เชี่ยวชาญด้านนโยบายการเกษตร\n\n## หน้าที่\n\
+              ค้นหาและสรุปข่าวสารการเกษตรที่สำคัญ นโยบายรัฐบาล โครงการช่วยเหลือเงินอุดหนุน\
+              \ และการแจ้งเตือนต่างๆ สำหรับเกษตรกร\n\n## วิธีค้นหา (DuckDuckGo)\n\
+              ค้นหาตามลำดับ:\n1. \"ข่าวกระทรวงเกษตร นโยบาย [crop_name] ล่าสุด\"\n\
+              2. \"เงินช่วยเหลือชาวนา เกษตรกร [crop_name] ปีนี้\"\n3. \"เตือนภัยการเกษตร\
+              \ แจ้งเตือน [location]\"\n4. \"นโยบายรัฐ โครงการประกันรายได้ [crop_name]\"\
+              \n5. \"ข่าวเกษตรกร [crop_name] วันนี้\"\n\n## แหล่งที่น่าเชื่อถือ (ให้ความสำคัญ)\n\
+              - moac.go.th (กระทรวงเกษตรและสหกรณ์)\n- thairath.co.th, thansettakij.com,\
+              \ prachachat.net (หมวดเศรษฐกิจ/เกษตร)\n- baac.or.th (ธ.ก.ส.)\n\n## ข่าวสำคัญ\
+              \ / นโยบายล่าสุด:\n- ชื่องาน/โครงการ: ...\n- สาระสำคัญ: ...\n- วันที่ประกาศ:\
+              \ ...\n\n## เงื่อนไขและสิทธิประโยชน์:\n- ใครได้สิทธิบ้าง: ...\n- สิ่งที่ได้รับ:\
+              \ ...\n- หมดเขต: ...\n\n## แหล่งที่มา:\n- ใส่อ้างอิงด้วยแต่ไม่ต้องใส่\
+              \ url\n\n## ข้อควรระวัง\n- ระบุวันที่ของข่าวสารหรือนโยบายทุกครั้ง เพื่อให้ทราบว่าเป็นข้อมูลอัปเดตหรือไม่\n\
+              - เน้นนโยบายรัฐ หรือเงินช่วยเหลือที่เชื่อมโยงกับพืช (crop_name) หรือสถานที่\
+              \ (location) ที่ผู้ใช้ถามเป็นหลัก\n- หากไม่มีข่าวเด่น ให้ตอบว่าไม่พบข่าวสำคัญในช่วงนี้\
+              \ อย่างตรงไปตรงมา\n- ให้ตอบเป็น plain text เท่านั้น ห้ามใช้ markdown\
+              \ เด็ดขาด เช่น *** หรือ ## \n"
+          maximum_iterations:
+            type: constant
+            value: 3
+          model:
+            type: constant
+            value:
+              completion_params: {}
+              mode: chat
+              model: ptm-oss-120b
+              model_type: llm
+              provider: yangyaofei/vllm/vllm
+              type: model-selector
+          query:
+            type: constant
+            value: '{{#sys.query#}}'
+          tools:
+            type: constant
+            value:
+            - enabled: true
+              extra:
+                description: Perform searches on DuckDuckGo and get results.
+              parameters:
+                query:
+                  auto: 1
+                  value: null
+              provider_name: langgenius/duckduckgo/duckduckgo
+              provider_show_name: langgenius/duckduckgo/duckduckgo
+              schemas:
+              - auto_generate: null
+                default: null
+                form: llm
+                human_description:
+                  en_US: The search query.
+                  ja_JP: The search query.
+                  pt_BR: The search query.
+                  zh_Hans: 搜索查询语句。
+                label:
+                  en_US: Query string
+                  ja_JP: Query string
+                  pt_BR: Query string
+                  zh_Hans: 查询语句
+                llm_description: Key words for searching
+                max: null
+                min: null
+                name: query
+                options: []
+                placeholder: null
+                precision: null
+                required: true
+                scope: null
+                template: null
+                type: string
+              - auto_generate: null
+                default: 5
+                form: form
+                human_description:
+                  en_US: The maximum number of results to return.
+                  ja_JP: The maximum number of results to return.
+                  pt_BR: The maximum number of results to return.
+                  zh_Hans: 最大结果数量
+                label:
+                  en_US: Max results
+                  ja_JP: Max results
+                  pt_BR: Max results
+                  zh_Hans: 最大结果数量
+                llm_description: ''
+                max: null
+                min: null
+                name: max_results
+                options: []
+                placeholder: null
+                precision: null
+                required: true
+                scope: null
+                template: null
+                type: number
+              - auto_generate: null
+                default: false
+                form: form
+                human_description:
+                  en_US: Whether to pass the search results to llm for summarization.
+                  ja_JP: Whether to pass the search results to llm for summarization.
+                  pt_BR: Whether to pass the search results to llm for summarization.
+                  zh_Hans: 是否需要将搜索结果传给大模型总结
+                label:
+                  en_US: Require Summary
+                  ja_JP: Require Summary
+                  pt_BR: Require Summary
+                  zh_Hans: 是否总结
+                llm_description: ''
+                max: null
+                min: null
+                name: require_summary
+                options: []
+                placeholder: null
+                precision: null
+                required: false
+                scope: null
+                template: null
+                type: boolean
+              - auto_generate: null
+                default: null
+                form: form
+                human_description:
+                  en_US: 'Supports http/https/socks proxies. Example: http://user:pass@example.com:3128.'
+                  ja_JP: 'Supports http/https/socks proxies. Example: http://user:pass@example.com:3128.'
+                  pt_BR: 'Supports http/https/socks proxies. Example: http://user:pass@example.com:3128.'
+                  zh_Hans: 支持 http/https/socks 代理。示例：http://user:pass@example.com:3128。
+                label:
+                  en_US: Proxy server
+                  ja_JP: Proxy server
+                  pt_BR: Proxy server
+                  zh_Hans: 代理服务器
+                llm_description: ''
+                max: null
+                min: null
+                name: proxy_server
+                options: []
+                placeholder: null
+                precision: null
+                required: false
+                scope: null
+                template: null
+                type: string
+              settings:
+                max_results:
+                  value:
+                    type: constant
+                    value: 5
+                proxy_server:
+                  value:
+                    type: mixed
+                    value: null
+                require_summary:
+                  value:
+                    type: constant
+                    value: false
+              tool_description: Perform searches on DuckDuckGo and get results.
+              tool_label: DuckDuckGo Search
+              tool_name: ddgo_search
+              type: builtin
+        agent_strategy_label: FunctionCalling
+        agent_strategy_name: function_calling
+        agent_strategy_provider_name: langgenius/agent/agent
+        memory:
+          query_prompt_template: '{{#sys.query#}}
+
+
+            {{#sys.files#}}'
+          window:
+            enabled: false
+            size: 50
+        meta:
+          minimum_dify_version: 1.7.0
+          version: 0.0.2
+        output_schema: {}
+        plugin_unique_identifier: langgenius/agent:0.0.30@8e6a5ed91535194ff84d1e6917f7fc81c3e063237245fc959fd6047991ce8e71
+        selected: false
+        title: News Agent
+        tool_node_version: '2'
+        type: agent
+      height: 188
+      id: '1772597114397'
+      position:
+        x: 2112
+        y: 748.7318854933927
+      positionAbsolute:
+        x: 2112
+        y: 748.7318854933927
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        advanced_settings:
+          group_enabled: false
+          groups:
+          - groupId: ca5e453b-a9be-4ecf-be43-ac6269e5d92a
+            group_name: Group1
+            output_type: string
+            variables:
+            - - '1769246936158'
+              - text
+            - - '1769246947033'
+              - text
+            - - '17692525727110'
+              - text
+            - - '1769246938196'
+              - text
+            - - '17692535009230'
+              - text
+        output_type: string
+        selected: false
+        title: Variable Aggregator
+        type: variable-aggregator
+        variables:
+        - - '1769246936158'
+          - text
+        - - '1769246947033'
+          - text
+        - - '1769246938196'
+          - text
+        - - '17692535009230'
+          - text
+        - - '1772597114397'
+          - text
+        - - rag_summary_llm
+          - text
+        - - '17745016989410'
+          - text
+        - - baac_matching_summary_llm
+          - text
+        - - '1774581638209'
+          - text
+      height: 317
+      id: '1772597341854'
+      position:
+        x: 2948.6359517046394
+        y: 590
+      positionAbsolute:
+        x: 2948.6359517046394
+        y: 590
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        authorization:
+          config:
+            api_key: U4bYswkLVEbnR1TKXbHAEYc6zwPmHTDxCDA5JkaH9sE
+            type: bearer
+          type: api-key
+        body:
+          data:
+          - type: text
+            value: '{"keyword": "{{#1774490296866.product_name#}}", "search_mode":
+              "api", "markdown": true}'
+          type: raw-text
+        headers: Content-Type:application/json
+        method: POST
+        params: ''
+        retry_config:
+          max_retries: 3
+          retry_enabled: false
+          retry_interval: 100
+        selected: false
+        ssl_verify: false
+        timeout:
+          connect: 10
+          read: 60
+          write: 60
+        title: BAAC Matching API
+        type: http-request
+        url: https://nonprogressively-escartelly-akiko.ngrok-free.dev/search
+      height: 124
+      id: baac_matching_api
+      position:
+        x: 2168.461261729817
+        y: 1037.7783520838163
+      positionAbsolute:
+        x: 2168.461261729817
+        y: 1037.7783520838163
+      selected: false
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        memory:
+          query_prompt_template: '{{#sys.query#}}
+
+
+            {{#sys.files#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: false
+            size: 50
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: ptm-oss-120b
+          provider: yangyaofei/vllm/vllm
+        prompt_template:
+        - id: bb8975df-6ce3-4b64-b22e-581dc4dc2550
+          role: system
+          text: "คุณคือผู้ช่วยให้ข้อมูลสถานการณ์น้ำมันจากปั๊มน้ำมัน นำข้อมูลที่ได้จาก\
+            \ Thai Pump Radar Context นี้ มาตอบ\n- อธิบายสถานการณ์ตามที่ได้รับมาใน\
+            \ context ให้ครบ \n- ไม่ให้มี markdown \n- ปรับ G เป็นแก๊สโซฮอล์ เช่น\
+            \ G95 คือแก๊สโซฮอล์ 95 \n- ปรับ E20 / E85 เป็น  แก๊สโซฮอล์ E20 / แก๊สโซฮอล์\
+            \ E85 \nContext:\n{{#17745008212620.body#}}\nถ้าไม่มีข้อมูลก็ตอบว่าไม่มี\n"
+        - id: c1e323dc-3391-4c40-9783-3631a578e316
+          role: user
+          text: '{{#sys.query#}}'
+        reasoning_format: separated
+        selected: false
+        structured_output_enabled: false
+        title: Pump Radar Agent
+        type: llm
+        vision:
+          enabled: false
+      height: 88
+      id: baac_matching_summary_llm
+      position:
+        x: 2593.2021302370445
+        y: 1289.9319299470917
+      positionAbsolute:
+        x: 2593.2021302370445
+        y: 1289.9319299470917
+      selected: false
+      type: custom
+      width: 242
+    - data:
+        dataset_ids:
+        - V31nIm5ja2vsXGG9xQVWKP633TZRyM191VUOUD2/EadP1izCIJJq9T0ctFsKZKff
+        - qQeh4XqNIQIh0RJMSUiWV574X2uQNQoPvc4hYkxN2HUqegkGs/hEJP2DmeFpMCRF
+        multiple_retrieval_config:
+          reranking_enable: false
+          reranking_mode: ''
+          top_k: 4
+        query_attachment_selector: []
+        query_variable_selector:
+        - '1769246337707'
+        - sys.query
+        retrieval_mode: single
+        selected: false
+        single_retrieval_config:
+          model:
+            completion_params: {}
+            mode: chat
+            name: ptm-oss-120b
+            provider: yangyaofei/vllm/vllm
+        title: BAAC Economy RAG
+        type: knowledge-retrieval
+      height: 118
+      id: rag_knowledge_node
+      position:
+        x: 1828.157681122668
+        y: 1170.2746403861377
+      positionAbsolute:
+        x: 1828.157681122668
+        y: 1170.2746403861377
+      selected: false
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        memory:
+          query_prompt_template: '{{#sys.query#}}
+
+
+            {{#sys.files#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: false
+            size: 50
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: ptm-oss-120b
+          provider: yangyaofei/vllm/vllm
+        prompt_template:
+        - id: 261e78df-0960-4b8c-ae77-9f2d635db5c2
+          role: system
+          text: 'ตอบคำถามผู้ใช้เกี่ยวกับสถานการณ์เศรษฐกิจและราคาโดยอ้างอิงจากข้อมูลบทวิเคราะห์จาก
+            BAAC Context RAG:
+
+            {{#rag_knowledge_node.result#}}
+
+            '
+        - id: 580b4c09-07eb-41c7-8df9-3253a6035362
+          role: user
+          text: '{{#sys.query#}}'
+        reasoning_format: separated
+        selected: false
+        title: Analyze Economy (RAG)
+        type: llm
+        vision:
+          enabled: false
+      height: 88
+      id: rag_summary_llm
+      position:
+        x: 2168.461261729817
+        y: 1235.6958249732647
+      positionAbsolute:
+        x: 2168.461261729817
+        y: 1235.6958249732647
+      selected: false
+      type: custom
+      width: 242
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: is
+            id: cond_run_market
+            value: 'true'
+            varType: string
+            variable_selector:
+            - '1772591435388'
+            - run_baac_market
+          id: 'true'
+          logical_operator: and
+        selected: false
+        title: IF baac_market_agent
+        type: if-else
+      height: 124
+      id: baac_if_market
+      position:
+        x: 1481.4181478084863
+        y: 899.9441272853744
+      positionAbsolute:
+        x: 1481.4181478084863
+        y: 899.9441272853744
+      selected: false
+      type: custom
+      width: 242
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: is
+            id: cond_run_forecast
+            value: 'true'
+            varType: string
+            variable_selector:
+            - '1772591435388'
+            - run_baac_forecast
+          id: 'true'
+          logical_operator: and
+        selected: false
+        title: IF baac_forecast_agent
+        type: if-else
+      height: 124
+      id: baac_if_forecast
+      position:
+        x: 1481.4181478084863
+        y: 1098.2377836890328
+      positionAbsolute:
+        x: 1481.4181478084863
+        y: 1098.2377836890328
+      selected: false
+      type: custom
+      width: 242
+    - data:
+        instruction: 'สกัดคำสำคัญ (Keyword) สินค้าจากคำถามของผู้ใช้ ตอบกลับเฉพาะคำสำคัญคำเดียวเท่านั้น
+          เช่น "ข้าว", "ยางพารา" '
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: ptm-oss-120b
+          provider: yangyaofei/vllm/vllm
+        parameters:
+        - description: ชื่อเฉพาะของสินค้าหรือชื่อสินค้าทั่วไป
+          name: product_name
+          required: false
+          type: string
+        query:
+        - sys
+        - query
+        reasoning_mode: prompt
+        selected: false
+        title: Parameter Extractor
+        type: parameter-extractor
+        vision:
+          enabled: false
+      height: 88
+      id: '1774490296866'
+      position:
+        x: 1828.157681122668
+        y: 984.9144553268616
+      positionAbsolute:
+        x: 1828.157681122668
+        y: 984.9144553268616
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: is
+            id: b436fddf-52df-4419-9474-b2d1ec7140d2
+            value: true
+            varType: boolean
+            variable_selector:
+            - '1772591435388'
+            - run_pumpradar
+          id: 'true'
+          logical_operator: and
+        selected: false
+        title: IF PUMP_RADAR
+        type: if-else
+      height: 124
+      id: '1774500544960'
+      position:
+        x: 1481.4181478084863
+        y: 1295.0370535604534
+      positionAbsolute:
+        x: 1481.4181478084863
+        y: 1295.0370535604534
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        instruction: สกัดคำสำคัญ (Keyword) ชื่อจังหวัดจากคำถามของผู้ใช้ ตอบกลับเฉพาะคำสำคัญคำเดียวเท่านั้น
+          เช่น "กรุงเทพมหานคร", "กระบี่" ถ้าได้กรุงเทพ ให้ใช้ "กรุงเทพมหานคร" ถ้าชื่อจังหวัดสะกดผิดให้ปรับให้ถูกด้วยนะ
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: ptm-oss-120b
+          provider: yangyaofei/vllm/vllm
+        parameters:
+        - description: ชื่อจังหวัด
+          name: province_name
+          required: false
+          type: string
+        query:
+        - sys
+        - query
+        reasoning_mode: prompt
+        selected: false
+        title: Province Extractor
+        type: parameter-extractor
+        vision:
+          enabled: false
+      height: 88
+      id: '17745008162610'
+      position:
+        x: 1828.157681122668
+        y: 1408.6597344777115
+      positionAbsolute:
+        x: 1828.157681122668
+        y: 1408.6597344777115
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        authorization:
+          config:
+            api_key: U4bYswkLVEbnR1TKXbHAEYc6zwPmHTDxCDA5JkaH9sE
+            header: X-API-KEY
+            type: custom
+          type: api-key
+        body:
+          data:
+          - type: text
+            value: '{"province": "{{#17745008162610.province_name#}}", "source_type":
+              "api", "markdown": true}'
+          type: raw-text
+        headers: Content-Type:application/json
+        method: POST
+        params: ''
+        retry_config:
+          max_retries: 3
+          retry_enabled: false
+          retry_interval: 100
+        selected: false
+        ssl_verify: false
+        timeout:
+          connect: 10
+          read: 60
+          write: 60
+        title: Pump Radar API
+        type: http-request
+        url: https://nonprogressively-escartelly-akiko.ngrok-free.dev/oil/fuel-status
+        variables: []
+      height: 124
+      id: '17745008212620'
+      position:
+        x: 2168.461261729817
+        y: 1422.098586155702
+      positionAbsolute:
+        x: 2168.461261729817
+        y: 1422.098586155702
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        memory:
+          query_prompt_template: '{{#sys.query#}}
+
+
+            {{#sys.files#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: false
+            size: 50
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: ptm-oss-120b
+          provider: yangyaofei/vllm/vllm
+        prompt_template:
+        - id: bb8975df-6ce3-4b64-b22e-581dc4dc2550
+          role: system
+          text: 'คุณคือผู้ช่วยแนะนำสินค้าจาก BAAC นำข้อมูลสินค้าที่ได้จาก API Context
+            นี้ มาสรุปและแนะนำผู้ใช้ให้ตรงตามที่ผู้ใช้ต้องการ Context API:
+
+            {{#baac_matching_api.body#}}
+
+            ถ้าไม่มีก็ตอบว่าไม่มี
+
+            '
+        - id: c1e323dc-3391-4c40-9783-3631a578e316
+          role: user
+          text: '{{#sys.query#}}'
+        reasoning_format: separated
+        selected: false
+        structured_output_enabled: false
+        title: Recommend Products
+        type: llm
+        vision:
+          enabled: false
+      height: 88
+      id: '17745016989410'
+      position:
+        x: 2593.2021302370445
+        y: 949.866791226214
+      positionAbsolute:
+        x: 2593.2021302370445
+        y: 949.866791226214
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        code: "table = str.maketrans(\"\", \"\", \"#*|\")\n\ndef main(s: str):\n \
+          \   return {\n        \"result\": s.translate(table)\n    }"
+        code_language: python3
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: Code 2
+        type: code
+        variables:
+        - value_selector:
+          - '1769248238853'
+          - text
+          value_type: string
+          variable: s
+      height: 52
+      id: '1774519921694'
+      position:
+        x: 3665.4633304520485
+        y: 724.5314278410843
+      positionAbsolute:
+        x: 3665.4633304520485
+        y: 724.5314278410843
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: is
+            id: 59d97553-b5f5-4dfc-8e40-d2991e5e0762
+            value: true
+            varType: boolean
+            variable_selector:
+            - '1772591435388'
+            - run_oil_price
+          id: 'true'
+          logical_operator: and
+        selected: false
+        title: IF OIL_PRICE
+        type: if-else
+      height: 124
+      id: '1774580673877'
+      position:
+        x: 1481.4181478084863
+        y: 1517.9128404017868
+      positionAbsolute:
+        x: 1481.4181478084863
+        y: 1517.9128404017868
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        headers: ''
+        method: get
+        params: ''
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 100
+        selected: false
+        ssl_verify: true
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: Oil Price API
+        type: http-request
+        url: https://oil-price.bangchak.co.th/ApiOilPrice2
+        variables: []
+      height: 137
+      id: '1774580759965'
+      position:
+        x: 1828.157681122668
+        y: 1613.3909053655075
+      positionAbsolute:
+        x: 1828.157681122668
+        y: 1613.3909053655075
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        code: "import json\n\ndef main(http_response) -> dict:\n    prices = []\n\
+          \    \n    raw_body = http_response\n    if isinstance(http_response, dict)\
+          \ and \"body\" in http_response:\n        raw_body = http_response[\"body\"\
+          ]\n    \n    data = []\n    if isinstance(raw_body, str):\n        try:\n\
+          \            data = json.loads(raw_body)\n        except json.JSONDecodeError:\n\
+          \            data = []\n    elif isinstance(raw_body, list):\n        data\
+          \ = raw_body\n\n    summary_date = \"\"\n    if isinstance(data, list) and\
+          \ len(data) > 0:\n        entry = data[0]\n        \n        summary_date\
+          \ = entry.get(\"OilRemark2\", \"\") \n        if not summary_date:\n   \
+          \         summary_date = entry.get(\"OilPriceDate\", \"\") \n        \n\
+          \        oil_list_raw = entry.get(\"OilList\", \"[]\")\n        \n     \
+          \   oil_items = []\n        if isinstance(oil_list_raw, str):\n        \
+          \    try:\n                oil_items = json.loads(oil_list_raw)\n      \
+          \      except json.JSONDecodeError:\n                oil_items = []\n  \
+          \      else:\n            oil_items = oil_list_raw if isinstance(oil_list_raw,\
+          \ list) else []\n            \n        for item in oil_items:\n        \
+          \    prices.append({\n                \"name\": str(item.get(\"OilName\"\
+          , \"\")),\n                \"yesterday\": str(item.get(\"PriceYesterday\"\
+          , \"0\")),\n                \"today\": str(item.get(\"PriceToday\", \"0\"\
+          )),\n                \"tomorrow\": str(item.get(\"PriceTomorrow\", \"0\"\
+          )),\n                \"unit\": \"บาท\"\n            })\n            \n \
+          \   text_summary = f\"{summary_date}:\\n\" if summary_date else \"ราคาน้ำมันบางจากฉบับล่าสุด:\\\
+          n\"\n    if not prices:\n        text_summary += \"ไม่พบข้อมูลราคาน้ำมัน\"\
+          \n    else:\n        for p in prices:\n            text_summary += f\"-\
+          \ {p['name']}:\\n  เมื่อวาน: {p['yesterday']} | วันนี้: {p['today']} | พรุ่งนี้:\
+          \ {p['tomorrow']} ({p['unit']})\\n\"\n    \n    return {\n        \"text_result\"\
+          : text_summary,\n        \"date_info\": summary_date\n    }\n"
+        code_language: python3
+        outputs:
+          date_info:
+            children: null
+            type: string
+          text_result:
+            children: null
+            type: string
+        selected: false
+        title: Code 3
+        type: code
+        variables:
+        - value_selector:
+          - '1774580759965'
+          - body
+          value_type: string
+          variable: http_response
+      height: 52
+      id: '1774580804380'
+      position:
+        x: 2168.461261729817
+        y: 1645.4148635908668
+      positionAbsolute:
+        x: 2168.461261729817
+        y: 1645.4148635908668
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        memory:
+          query_prompt_template: '{{#sys.query#}}
+
+
+            {{#sys.files#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: false
+            size: 50
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: ptm-oss-120b
+          provider: yangyaofei/vllm/vllm
+        prompt_template:
+        - id: 4f3b6f1a-f662-4d62-a0e1-2d63626703ce
+          role: system
+          text: "คุณคือผู้ช่วยให้ข้อมูลราคาน้ำมันจาก API บางจาก นำข้อมูลที่ได้นี้\
+            \ มาตอบ\n- อธิบายราคาให้ครบ\n- ไม่ให้มี markdown \n- ใช้ pattern นี้นะ\
+            \ 30 บาท (ไม่เอาต่อลิตร)\n- บอกวันที่เสมอ ราคาน้ำมันที่มีผล\n- บอกที่มาเสมอ\n\
+            Context:\n{{#1774580804380.text_result#}}\n{{#1774580804380.date_info#}}\n\
+            ถ้าไม่มีข้อมูลก็ตอบว่าไม่มี"
+        - id: 5ee37ba5-1ecd-4267-a7f6-43892929fe4f
+          role: user
+          text: '{{#sys.query#}}'
+        selected: false
+        title: Oil Price Agent
+        type: llm
+        vision:
+          enabled: false
+      height: 88
+      id: '1774581638209'
+      position:
+        x: 2593.2021302370445
+        y: 1537.6515618147573
+      positionAbsolute:
+        x: 2593.2021302370445
+        y: 1537.6515618147573
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    viewport:
+      x: -805.4153915694906
+      y: -548.7840940842702
+      zoom: 0.640823962080099
+  rag_pipeline_variables: []
